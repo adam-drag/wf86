@@ -1,0 +1,51 @@
+{
+  "input": {
+    "a": "abc",
+    "b": 2
+  },
+  "statement": {
+    "type": "if",
+    "condition": {
+      "type": "logical",
+      "operator": "&&",
+      "conditions": [
+        {
+          "type": "comparison",
+          "input": "a",
+          "operator": "==",
+          "variable": "abc"
+        },
+        {
+          "type": "comparison",
+          "input": "b",
+          "operator": ">",
+          "variable": 4
+        }
+      ]
+    },
+    "trueBranch": {
+      "statement": null,
+      "returnValue": true
+    },
+    "falseBranch": {
+      "statement": {
+        "type": "if",
+        "condition": {
+          "type": "comparison",
+          "input": "b",
+          "operator": "<",
+          "variable": 10
+        },
+        "trueBranch": {
+          "statement": null,
+          "returnValue": true
+        },
+        "falseBranch": {
+          "statement": null,
+          "returnValue": false
+        }
+      },
+      "returnValue": null
+    }
+  }
+}
